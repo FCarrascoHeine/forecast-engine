@@ -1,3 +1,27 @@
-.venv/
+# Python
 __pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.env
+.venv/
+venv/
+ENV/
+env/
+
+# VS Code
 .vscode/
+
+# Byte-compiled / optimized / DLL files
+*.pyc
+
+# Distribution / packaging
+build/
+dist/
+*.egg-info/
+
+# Logs
+*.log
+
+# Others
+*.sqlite3

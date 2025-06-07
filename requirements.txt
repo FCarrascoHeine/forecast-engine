@@ -1,1 +1,6 @@
-flask
+fastapi
+uvicorn[standard]
+jinja2                 # For template rendering
+python-multipart       # For file uploads
+htmx                   # optional (HTMX is mostly client-side)
+pandas                 # to handle CSV and get shape easily

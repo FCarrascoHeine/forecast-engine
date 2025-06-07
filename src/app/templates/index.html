@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>CSV Upload - Forecast Engine</title>
+    <script src="https://unpkg.com/htmx.org@1.9.2"></script>
+</head>
+<body>
+    <h1>Upload CSV File</h1>
+
+    <!-- Upload form -->
+    <form
+        hx-post="/upload-csv"
+        hx-target="#result"
+        hx-swap="innerHTML"
+        enctype="multipart/form-data"
+        method="post"
+    >
+        <input type="file" name="file" accept=".csv" required />
+        <button type="submit">Upload</button>
+    </form>
+
+    <!-- Result area -->
+    <div id="result">
+        {% if success %}
+            <p style="color: green;">File <strong>{{ filename }}</strong> uploaded successfully!</p>
+            <p>Rows: {{ rows }}, Columns: {{ columns }}</p>
+        {% elif error %}
+            <p style="color: red;">Error: {{ error }}</p>
+        {% endif %}
+    </div>
+</body>
+</html>
