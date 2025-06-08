@@ -11,7 +11,7 @@ Stay tuned for updates as new features are added!
 ## 🚀 Current features
 
 - Dropdown to select a CSV file from the `data/` directory
-- Confirmation page showing the selected file
+- Confirmation page showing the selected file and its number of rows
 - Clean, object-oriented structure ready for extension
 - Serves a `favicon.ico` from `static/`
 - FastAPI backend with Jinja2 templates
@@ -35,6 +35,7 @@ Stay tuned for updates as new features are added!
 
 ## 📅 Roadmap Ideas
 
+- Forecasting tools
 - CSV upload from browser
 - Plotly Dash integration
 - Database connectivity

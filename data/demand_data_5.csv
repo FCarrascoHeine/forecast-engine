@@ -1,0 +1,6 @@
+Date,Product_ID,Location,Demand,Price,Promotion,Stock_Level,Day_of_Week,Is_Holiday
+2024-01-01,A123,Hamburg,96,9.61,Yes,269,Monday,Yes
+2024-01-02,B234,Berlin,107,8.54,No,207,Tuesday,No
+2024-01-03,C345,Berlin,88,10.3,No,270,Wednesday,No
+2024-01-04,A123,Hamburg,103,10.26,No,95,Thursday,No
+2024-01-05,B234,Munich,111,10.01,No,166,Friday,No
