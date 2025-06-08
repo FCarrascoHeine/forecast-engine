@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block content %}
+<h1>Select a CSV File</h1>
+<form action="/select" method="post">
+    <select name="selected_file">
+        {% for file in files %}
+            <option value="{{ file }}">{{ file }}</option>
+        {% endfor %}
+    </select>
+    <button type="submit">Submit</button>
+</form>
+
+{% if confirmation %}
+    <p>You selected: <strong>{{ selected_file }}</strong></p>
+    <a href="/">Back to start</a>
+{% endif %}
+{% endblock %}
