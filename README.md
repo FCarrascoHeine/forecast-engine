@@ -2,7 +2,7 @@
 
 **Status:** Under Construction 🚧
 
-Our vision for the Forecast Engine is an easy-to-use tool for generating demand forecasts from user-provided data. The goal is to provide a simple interface for receiving accurate demand predictions, making it accessible for users without deep statistical or programming knowledge.
+Our vision for the Forecast Engine is an easy-to-use tool for generating demand forecasts from user-provided data. The goal is to provide a simple interface for computing accurate demand predictions, making it accessible for users without deep statistical or programming knowledge.
 
 This project will start with basic features and gradually expand to include more advanced functionality and customization options.
 
