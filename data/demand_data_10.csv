@@ -4,3 +4,8 @@ Date,Product_ID,Location,Demand,Price,Promotion,Stock_Level,Day_of_Week,Is_Holid
 2024-01-03,C345,Berlin,88,10.3,No,270,Wednesday,No
 2024-01-04,A123,Hamburg,103,10.26,No,95,Thursday,No
 2024-01-05,B234,Munich,111,10.01,No,166,Friday,No
+2024-01-07,B234,Hamburg,76,9.97,No,209,Sunday,No
+2024-01-08,C345,Berlin,97,8.83,Yes,264,Monday,No
+2024-01-09,A123,Hamburg,111,11.14,No,210,Tuesday,No
+2024-01-10,B234,Berlin,93,10.75,Yes,116,Wednesday,No
+2024-01-11,C345,Hamburg,87,10.79,No,177,Thursday,No
