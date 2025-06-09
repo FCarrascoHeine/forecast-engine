@@ -2,7 +2,7 @@ import pandas as pd
 
 from sklearn.linear_model import LinearRegression
 from sklearn.model_selection import train_test_split
-from sklearn.metrics import accuracy_score
+from sklearn.metrics import r2_score
 
 class ModelTrainer:
     def train_linear_regression(self, df: pd.DataFrame) -> float:
@@ -21,6 +21,6 @@ class ModelTrainer:
         model.fit(X_train, y_train)
 
         y_pred = model.predict(X_test)
-        accuracy = 1 #accuracy_score(y_test, y_pred)
+        r2_value = r2_score(y_test, y_pred)
 
-        return accuracy
+        return r2_value

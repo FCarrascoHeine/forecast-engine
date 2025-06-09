@@ -38,13 +38,13 @@ async def handle_selection(request: Request, selected_file: str = Form(...)):
     # Load the selected CSV file as a DataFrame
     df = data_loader.load_csv_as_df(selected_file)
     entry_count = len(df)
-    accuracy = model_trainer.train_linear_regression(df)
+    r2_score = model_trainer.train_linear_regression(df)
 
     return templates.TemplateResponse("select.html", {
         "request": request,
         "selected_file": selected_file,           # The filename chosen by user
         "entry_count": entry_count,               # Number of entries in the selected file
-        "accuracy": accuracy,                     # Accuracy of the trained model  
+        "r2_score": r2_score,                     # Accuracy of the trained model  
         "files": data_loader.list_csv_files(),    # Re-fetch files to populate dropdown
         "confirmation": True                      # Flag to show confirmation message
     })

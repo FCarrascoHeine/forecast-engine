@@ -12,7 +12,7 @@
 
 {% if confirmation %}
     <p>You selected: <strong>{{ selected_file }}</strong> ({{ entry_count }} entries)</p>
-    <p>Linear Regression Accuracy: {{accuracy | round(3)}}</p>
+    <p>Linear Regression R2 Value: {{r2_score | round(3)}}</p>
     <a href="/">Back to start</a>
 {% endif %}
 {% endblock %}
