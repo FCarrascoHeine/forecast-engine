@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
-<h1>Select a CSV File</h1>
+<h1>Forecast Engine</h1>
+<h2>Select a CSV File</h2>
 <form action="/select" method="post">
     <select name="selected_file">
         {% for file in files %}
@@ -12,6 +13,7 @@
 
 {% if confirmation %}
     <p>You selected: <strong>{{ selected_file }}</strong> ({{ entry_count }} entries)</p>
+    <p>Linear Regression R2 value: {{r2_score | round(3)}}</p>
     <a href="/">Back to start</a>
 {% endif %}
 {% endblock %}

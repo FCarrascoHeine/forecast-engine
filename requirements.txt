@@ -1,4 +1,5 @@
 fastapi
 jinja2
 pandas
+scikit-learn
 uvicorn

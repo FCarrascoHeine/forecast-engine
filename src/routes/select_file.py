@@ -1,7 +1,9 @@
 from fastapi import APIRouter, Request, Form
 from fastapi.responses import HTMLResponse
 from fastapi.templating import Jinja2Templates
+
 from src.services.data_loader import DataLoader
+from src.services.model_training import ModelTrainer
 
 # Create an APIRouter instance to group routes related to file selection
 router = APIRouter()
@@ -11,6 +13,9 @@ templates = Jinja2Templates(directory="src/templates")
 
 # Initialize the data loader service to list CSV files
 data_loader = DataLoader()
+
+# Initialize a model trainer instance to train the model
+model_trainer = ModelTrainer()
 
 @router.get("/", response_class=HTMLResponse)
 async def show_form(request: Request):
@@ -33,11 +38,13 @@ async def handle_selection(request: Request, selected_file: str = Form(...)):
     # Load the selected CSV file as a DataFrame
     df = data_loader.load_csv_as_df(selected_file)
     entry_count = len(df)
+    r2_score = model_trainer.train_linear_regression(df)
 
     return templates.TemplateResponse("select.html", {
         "request": request,
         "selected_file": selected_file,           # The filename chosen by user
         "entry_count": entry_count,               # Number of entries in the selected file
+        "r2_score": r2_score,                     # Accuracy of the trained model  
         "files": data_loader.list_csv_files(),    # Re-fetch files to populate dropdown
         "confirmation": True                      # Flag to show confirmation message
     })
