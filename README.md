@@ -12,8 +12,8 @@ Stay tuned for updates as new features are added!
 
 - Dropdown to select a CSV file from the `data/` directory
 - Confirmation page showing the selected file and its number of rows
+- A linear regression is trained with the selected data, and R<sup>2</sup> is displayed.
 - Clean, object-oriented structure ready for extension
-- Serves a `favicon.ico` from `static/`
 - FastAPI backend with Jinja2 templates
 
 ## ⚙️ Setup
@@ -35,7 +35,7 @@ Stay tuned for updates as new features are added!
 
 ## 📅 Roadmap Ideas
 
-- Forecasting tools
+- Additional forecasting tools
 - CSV upload from browser
 - Plotly Dash integration
 - Database connectivity
