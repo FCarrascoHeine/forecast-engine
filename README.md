@@ -13,6 +13,7 @@ Stay tuned for updates as new features are added!
 - Dropdown to select a CSV file from the `data/` directory
 - Confirmation page showing the selected file and its number of rows
 - A linear regression is trained with the selected data, and R<sup>2</sup> is displayed.
+- The resulting model is saved in the `results` folder.
 - Clean, object-oriented structure ready for extension
 - FastAPI backend with Jinja2 templates
 
