@@ -1,5 +1,8 @@
+import joblib
+
 import pandas as pd
 
+from pathlib import Path
 from sklearn.linear_model import LinearRegression
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import r2_score
@@ -24,5 +27,8 @@ class ModelTrainer:
 
         y_pred = model.predict(X_test)
         r2_value = r2_score(y_test, y_pred)
+
+        # Save results
+        joblib.dump(model, Path.cwd()/'results'/'lr_model.pkl')
 
         return r2_value
